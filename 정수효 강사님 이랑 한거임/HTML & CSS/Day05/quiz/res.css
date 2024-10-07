@@ -1,0 +1,51 @@
+/* 1024px 이상 pc - 가로 4줄 */
+/* 768~1024 tablert 2*2 */
+/* 768 이하 mobile 세로 1줄 */
+
+.bigbox {
+  display: flex;
+  flex-direction: row;
+}
+
+.wrepper {
+  display: flex;
+  flex-direction: row;
+}
+
+.box1 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+.box2 {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+}
+
+.box3 {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+}
+
+.box4 {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+}
+
+@media screen and (max-width: 1024px) {
+  .wrepper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bigbox {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,52 @@
+.title {
+  width: 500px;
+  display: flex;
+  flex-direction: row;
+}
+.q {
+  padding: 30px 50px 30px 50px;
+  color: white;
+  background-color: turquoise;
+}
+
+.w {
+  padding: 30px 50px 30px 50px;
+  color: white;
+  background-color: #2ecc71;
+}
+
+.e {
+  padding: 30px 50px 30px 50px;
+  color: white;
+  background-color: #3498db;
+}
+.r {
+  padding: 30px 50px 30px 50px;
+  color: white;
+  background-color: #16a085;
+}
+.t {
+  padding: 30px 50px 30px 50px;
+  color: white;
+  background-color: #27ae60;
+}
+.y {
+  padding: 30px 50px 30px 50px;
+  color: white;
+  background-color: #2980b9;
+}
+.u {
+  padding: 30px 50px 30px 50px;
+  color: white;
+  background-color: #f1c40f;
+}
+.i {
+  padding: 30px 50px 30px 50px;
+  color: white;
+  background-color: #e67e22;
+}
+.o {
+  padding: 30px 50px 30px 50px;
+  color: white;
+  background-color: #e74c3c;
+}

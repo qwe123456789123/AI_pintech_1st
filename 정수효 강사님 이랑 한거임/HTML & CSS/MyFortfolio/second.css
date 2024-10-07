@@ -1,0 +1,56 @@
+@font-face {
+  font-family: "HakgyoansimNadeuriTTF-B";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2408-5@1.0/HakgyoansimNadeuriTTF-B.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+.second {
+  width: 100vw;
+  padding: 150px 0;
+}
+
+.centered {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.centered > div {
+  font-family: "HakgyoansimNadeuriTTF-B";
+  color: skyblue;
+  font-size: 48px;
+  font-weight: 800;
+}
+
+.centered {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.centered > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.centered > p {
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .centered {
+    max-width: 600px;
+  }
+  .contents {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contents > div {
+    margin: 0px;
+  }
+}

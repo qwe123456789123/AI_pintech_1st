@@ -1,0 +1,13 @@
+.title {
+  background-color: skyblue;
+  border: 1px solid white;
+  color: white;
+  padding: 10px 20px 10px 20px;
+}
+button {
+  border-radius: 30px;
+  border: 1px solid white;
+  height: 50px;
+  padding: 10px 20px 10px 20px;
+  font-weight: 700;
+}

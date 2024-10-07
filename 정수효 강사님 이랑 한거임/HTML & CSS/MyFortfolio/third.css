@@ -1,0 +1,41 @@
+.third {
+  width: 100vw;
+  padding: 100px 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.sns {
+  font-size: 40px;
+  font-weight: 800;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.icon {
+  width: 200px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ion > i {
+  font-size: 40px;
+}
+
+.icon > span {
+  font-size: 22px;
+}
+
+@media screen and(max-width) {
+  .sns {
+    gap: 50px;
+  }
+  .third {
+    padding: 50px 0;
+  }
+}

@@ -1,0 +1,67 @@
+.box {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.card {
+  width: 400px;
+  height: 350px;
+  background-image: url(card1.jpg);
+  background-size: cover;
+  color: white;
+  border-radius: 20px;
+}
+
+.card2 {
+  width: 400px;
+  height: 350px;
+  background-image: url(card2.jpg);
+  background-size: cover;
+  color: white;
+  border-radius: 20px;
+}
+
+.card3 {
+  width: 400px;
+  height: 350px;
+  background-image: url(card3.jpg);
+  background-size: cover;
+  color: white;
+  border-radius: 20px;
+}
+
+.card4 {
+  width: 400px;
+  height: 350px;
+  background-image: url(card4.jpg);
+  background-size: cover;
+  color: white;
+  border-radius: 20px;
+}
+.q {
+  font-size: 15px;
+  padding: 10px;
+  border-bottom: 1px solid white;
+  width: fit-content;
+  padding-bottom: 3px;
+}
+
+.w {
+  font-size: 30px;
+  font-weight: 500;
+  gap: 10px;
+  padding: 10px;
+}
+
+.e {
+  font-size: 30px;
+  font-weight: 500;
+  gap: 10px;
+  padding: 10px;
+}
+
+.r {
+  font-size: 15px;
+  gap: 5px;
+  padding: 10px;
+}

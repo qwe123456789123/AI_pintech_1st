@@ -1,0 +1,51 @@
+/* 반응형 */
+/* pc버전, tablet버전, mobile버전을 위한 css */
+.box {
+  width: 500px;
+  height: 500px;
+  background-color: red;
+}
+
+/* 반응형 css */
+@media screen and (max-width: 800px) {
+  .box {
+    background-color: skyblue;
+  }
+}
+
+/* 1024px 높으면 박스 넓이 500 500 빨간 */
+/* 769px 높으면 박스 넓이 300 300  노랑*/
+/* 480px 높으면 박스 넓이 100 100 초록*/
+/* 480px 낮으면 박스 넓이 50 50 파란*/
+
+@media screen and (max-height: 1024px) {
+  .box {
+    width: 500px;
+    height: 500px;
+    background-color: red;
+  }
+}
+
+@media screen and (max-height: 769px) {
+  .box {
+    width: 300px;
+    height: 300px;
+    background-color: yellow;
+  }
+}
+
+@media screen and (max-height: 480px) {
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+  }
+}
+
+@media screen and (max-height: 200px) {
+  .box {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+  }
+}

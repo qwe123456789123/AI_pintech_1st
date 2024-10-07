@@ -1,0 +1,19 @@
+.m {
+  border: 2px solid black;
+  width: 500px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+button {
+  border: 1px solid white;
+  background-color: gray;
+  text-align: center;
+  padding: 20px 20px 20px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  /*font-family: "Courier New", Courier, monospace; 글꼴 바꾸기*/
+  /*line-height: 20px; 글간격 */
+  /*text-transform: uppercase; 글 모양 바꾸기*/
+  /*word-spacing: 30px; 자간*/
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+}

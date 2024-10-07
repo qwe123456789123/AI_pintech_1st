@@ -1,0 +1,23 @@
+.title {
+  width: 500px;
+  display: flex;
+  flex-direction: row;
+}
+
+.one {
+  padding: 30px 50px 30px 50px;
+  color: white;
+  background-color: turquoise;
+}
+
+.two {
+  padding: 30px 50px 30px 50px;
+  color: white;
+  background-color: #2ecc71;
+}
+
+.three {
+  padding: 30px 50px 30px 50px;
+  color: white;
+  background-color: #3498db;
+}

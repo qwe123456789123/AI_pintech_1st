@@ -1,0 +1,51 @@
+type angrydeth = 1 | 2 | 3 | 4 | 5;
+
+const d1: angrydeth = 5;
+
+type jobtype = "전사" | "마법사" | "궁수" | "도적";
+
+const d2: { id: String; level: number; job: jobtype } = {
+  id: "ㅈl존전ㅅㅏ",
+  level: 100,
+  job: "전사",
+};
+
+type hamberger = "불고기" | "새우" | "치즈" | "빅맥" | "상하이";
+type side = "감튀" | "치즈스틱" | "콘솔로우" | "해쉬브라운";
+type drinks = "콜라" | "제로콜라" | "사이다" | "환타" | "오렌지쥬스";
+type setmenu = {
+  main: string;
+  side: string;
+  drinks: string;
+};
+
+const mymacdinald: setmenu = {
+  main: "빅맥",
+  side: "감튀",
+  drinks: "콜라",
+};
+
+type a = "화이트" | "하티" | "파마산오레가노" | "허니오트" | "플렛브레드";
+type b = "에그" | "고기" | "아보카도" | "햄" | "피클";
+type c = "양상추" | "오이" | "올리브" | "파프리카" | "양파";
+type d = "아메리칸" | "슈레드" | "모짜렐라";
+type e = "랜치" | "스위트칠리" | "어니언" | "마요네즈" | "머스타드";
+type f = "랜치" | "스위트칠리" | "어니언" | "마요네즈" | "머스타드";
+
+type subway = {
+  a: string;
+  b: string;
+  c: string;
+  d: string;
+  e: string;
+  f: string;
+};
+
+const mypik: subway = {
+  a: "플렛브레드",
+  b: "에그",
+  c: "양파",
+  d: "아메리칸",
+  e: "어이언",
+  f: "마요네즈",
+};

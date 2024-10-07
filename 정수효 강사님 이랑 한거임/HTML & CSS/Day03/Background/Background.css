@@ -1,0 +1,13 @@
+.box {
+  width: 400px;
+  height: 400px;
+  background-color: skyblue;
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+.card {
+  width: 300px;
+  height: 300px;
+  background-image: url("fitness-594143_1280.jpg");
+  background-size: cover;
+}

@@ -1,0 +1,12 @@
+.album {
+  /* 사진의 실제 크기*/
+  width: 100px;
+  height: 100px;
+}
+.album > img {
+  /* 부모임*/
+  width: 100px;
+  height: 100px;
+  /* 사진이 비율에 맞게 바뀜*/
+  object-fit: cover;
+}

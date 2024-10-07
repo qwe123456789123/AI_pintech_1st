@@ -1,0 +1,25 @@
+.test {
+  color: skyblue;
+}
+.test:hover {
+  background-color: pink;
+  font-size: 100px;
+}
+
+.box {
+  background-color: green;
+  width: 100px;
+  height: 100px;
+  transition: all 5s;
+  transform: rotate(45deg);
+}
+
+/* 투명도 */
+/* opacity: 0.3; */
+
+/* 변형이 일어 날때 */
+
+.box:hover {
+  background-color: yellow;
+  border-radius: 9999px;
+}
