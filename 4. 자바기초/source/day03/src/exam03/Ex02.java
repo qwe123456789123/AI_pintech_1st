@@ -3,7 +3,7 @@ package exam03;
 public class Ex02 {
     public static void main(String[] args) {
         int result = calc(3); // 함수 호출 - 기능을 실행
-        System.out.println(result);
+        System.out.println(result); //
     }
 
 
