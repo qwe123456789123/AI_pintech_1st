@@ -4,7 +4,11 @@ public class Student {
 
     int id; // 학번
     String name; // 학생명
+<<<<<<< HEAD
     String major; // 전공과목
+=======
+    String major;; // 전공과목
+>>>>>>> e9085dc900abb842a05d0ade46a203b4475b9158
 
     /**
      * 따로 정의 하지 않으면 기본 생성되는 생성자
