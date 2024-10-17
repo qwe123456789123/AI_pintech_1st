@@ -8,6 +8,7 @@ public class Ex04 {
                 System.out.println("재정의된 메서드A");
             }
         };
+
         a.methodA();
     }
 }
