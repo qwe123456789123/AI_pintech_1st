@@ -1,12 +1,11 @@
 package exam01;
 
-public class Ex07 {
-    private String title;
+import java.util.Optional;
 
-    public void setTitle(String title){
-        title = title;
-    }
-    public String getTitle() {
-        return title;
+public class Ex07 {
+    public static void main(String[] args) {
+        Optional<Book> opt = Optional.ofNullable(null);
+        Book book = opt.orElseGet(() -> new Book());
+        Book boo2 = opt.orElseGet(Book::new);
     }
 }
