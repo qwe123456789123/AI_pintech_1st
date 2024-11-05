@@ -1,4 +1,4 @@
-package org.koreait.member.entites;
+package org.koreait.member.entities;
 
 import lombok.Data;
 
@@ -12,5 +12,6 @@ public class Member {
     private String userName; // 회원명
     private LocalDateTime regDt; // 가입일시
     private LocalDateTime modDt; // 수정일시
-}
 
+    private String regDtStr;
+}
