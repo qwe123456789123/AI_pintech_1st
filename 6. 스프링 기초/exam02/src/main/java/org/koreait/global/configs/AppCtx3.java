@@ -4,6 +4,7 @@ import org.koreait.member.repositories.MemberRepository;
 import org.koreait.member.services.InfoService;
 import org.koreait.member.services.JoinService;
 import org.koreait.member.validators.JoinValidator;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -29,7 +30,7 @@ public class AppCtx3 {
         return new MemberRepository();
     }
     */
-
+/*
     @Bean
     public JoinService joinService() {
         return new JoinService();
@@ -39,7 +40,7 @@ public class AppCtx3 {
     public InfoService infoService() {
         return new InfoService();
     }
-
+ */
     //@Bean
     public DateTimeFormatter formatter() {
         return DateTimeFormatter.ofPattern("yyyy.MM.dd HH:mm");

@@ -1,4 +1,4 @@
-package org.koreait.member.entities;
+package org.koreait.member.entites;
 
 import lombok.Data;
 

@@ -1,15 +1,17 @@
 package org.koreait.member.services;
 
-import org.koreait.member.entities.Member;
+import org.koreait.member.entites.Member;
 import org.koreait.member.repositories.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.lang.Nullable;
+import org.springframework.stereotype.Service;
 
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class InfoService {
 
     private MemberRepository repository;

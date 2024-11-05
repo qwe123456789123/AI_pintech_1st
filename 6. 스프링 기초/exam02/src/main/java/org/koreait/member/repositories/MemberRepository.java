@@ -1,7 +1,7 @@
 package org.koreait.member.repositories;
 
 import org.koreait.member.controllers.RequestJoin;
-import org.koreait.member.entities.Member;
+import org.koreait.member.entites.Member;
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDateTime;
