@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
  * 영구 저장 처리 또는 조회, 삭제 ..
- */
+        *  */
 @Repository
 @ManualBean
 public class MemberRepository { // 빈 이름 - MemberRepository
