@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultrag.net.nz/thymeleaf/layout">
+    <head>
+        <meta charset="UTF-8">
+        <title>제목임</title>
+    </head>
+    <body>
+        <header th:Replace="~{outlines/_header::common}"></header>
+        <main layout:fragment="content"></main>
+        <footer th:replace="~{outlines/_footer::common}"></footer>
+    </body>
+</html>
