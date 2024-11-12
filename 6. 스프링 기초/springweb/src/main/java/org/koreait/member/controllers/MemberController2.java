@@ -68,7 +68,7 @@ public class MemberController2 {
 
     @PostMapping("/member/login")
     public String loginPs(RequestLogin form) {
-
+        
         System.out.println(form);
 
         return "member/form";

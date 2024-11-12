@@ -41,8 +41,6 @@ public class MemberController {
         return "member/form";
     }
 
-
-
     @GetMapping("/join") //  /member/join
     public String join() { // 회원가입 양식
 
@@ -52,6 +50,7 @@ public class MemberController {
     @PostMapping("/join") // /member/join
     public String joinPs(RequestLogin form /*, Model model*/) { // 회원 가입 처리
         System.out.println(form);
+        // String hobby = form.get.hobby;
         // 커멘드 객체는 자동으로 EL 속성으로 추가, 속성명이 클래스명, 앞자는 소문자 RequestJoin -> requestJoin
         // model.addAttribute("requestJoin", form);
         /**
