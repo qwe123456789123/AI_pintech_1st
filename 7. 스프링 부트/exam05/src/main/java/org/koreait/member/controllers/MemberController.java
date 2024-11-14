@@ -1,59 +1,113 @@
-
 package org.koreait.member.controllers;
 
-import org.koreait.member.entities.Member;
+import jakarta.servlet.http.HttpSession;
+import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.koreait.member.services.LoginService;
+import org.koreait.member.validators.JoinValidator;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.validation.Errors;
+import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDateTime;
 import java.util.List;
-import java.util.stream.IntStream;
 
+@Slf4j
 @Controller
 @RequestMapping("/member")
+@RequiredArgsConstructor
 public class MemberController {
 
+    private final JoinValidator joinValidator;
+    private final LoginService loginService;
+
+    /**
+     * 회원가입 양식
+     *
+     * @return
+     */
+    /*
     @GetMapping("/join")
     public String join(Model model) {
 
-        RequestJoin form = new RequestJoin();
-        form.setEmail("user01@test.org");
-        form.setPassword("1234");
-        form.setConfirmPassword("1234");
-        form.setName("휴먼1");
+        RequestJoin requestJoin = new RequestJoin();
+        model.addAttribute("requestJoin", requestJoin);
 
-        model.addAttribute("requestJoin", form);
-
-        return "member/join";
+        return "member/joinForm";
+    }
+    */
+    @ModelAttribute("apples")
+    public List<String> apples() {
+        return List.of("사과1", "사과2", "사과3");
     }
 
+    @GetMapping("/join")
+    public String join(@ModelAttribute RequestJoin form, Model model) { // RequestJoin - requestJoin
+
+        return "member/joinForm";
+    }
+
+    /**
+     * 회원 가입 처리!
+     * @Valid : 검증할 커맨드 객체임을 알려준다!
+     * @Valid이 있으면 반드시 Errors 객체는 커맨드 객체 바로 다음에 나와야 한다!
+     * @return
+     */
     @PostMapping("/join")
-    public String joinPs() {
+    public String joinPs(@Valid RequestJoin form, Errors errors) {
+
+        joinValidator.validate(form, errors); // 커맨드 객체 검증
+
+        if (errors.hasErrors()) { // 검증 실패! - reject, rejectValue가 한번이라도 호출 되었다!
+            return "member/joinForm"; // 검증 실패하면 사용자에게 양식을 다시 보여주고, 검증 실패 정보를 제공!
+        }
+
+        // 검증 성공시 - 가입 처리 서비스 호출
+
+        return "redirect:/member/login"; // 가입 성공시 로그인 페이지로 이동
+    }
+
+    @GetMapping("/login")
+    public String login(@ModelAttribute RequestLogin form, @CookieValue(name="savedEmail", required = false) String savedEmail) {
+
+        if (savedEmail != null) { // 쿠키값이 있다면
+            form.setEmail(savedEmail);
+            form.setSaveEmail(true);
+        }
+
+        return "member/login";
+    }
+
+    @PostMapping("/login")
+    public String loginPs(@Valid RequestLogin form, Errors errors) {
+
+        if (errors.hasErrors()) {
+            return "member/login";
+        }
+
+        // 검증에 이상이 없는 상태 -> 로그인 처리
+        loginService.process(form);
+
+        return "redirect:/";
+    }
+
+    @RequestMapping("/logout")
+    public String logout(HttpSession session) {
+        session.invalidate(); // 세션 비우기
 
         return "redirect:/member/login";
     }
 
-    @GetMapping("/list")
-    public String list(Model model) {
-
-        List<Member> members = IntStream.rangeClosed(1, 10)
-                .mapToObj(i -> {
-                    Member member = new Member();
-                    member.setSeq(i);
-                    member.setEmail("user" + i + "@test.org");
-                    member.setName("<h1>휴먼" + i + "</h1>");
-                    member.setPassword("1234");
-                    member.setRegDt(LocalDateTime.now());
-                    member.setModDt(LocalDateTime.now());
-
-                    return member;
-                }).toList();
-
-        model.addAttribute("members", members);
-
-        return "member/list";
-    }
+    /**
+     * MemberController 공통 검증
+     * @Valid가 붙어 있는 커맨드 객체 공통 검증 처리
+     *
+     * @param binder
+     */
+    /*
+    @InitBinder
+    public void initBinder(WebDataBinder binder) {
+        binder.setValidator(joinValidator);
+    } */
 }
