@@ -1,5 +1,6 @@
 package org.koreait.order.controllers;
 
+import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.Errors;
@@ -13,8 +14,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class OrderController {
 
     @GetMapping("/list")
-    public String list(@ModelAttribute RequestOrder form, Errors errors) {
+    public String list(@ModelAttribute @Valid RequestOrder form, Errors errors) {
+
         log.info(form.toString());
+
         return "order/list";
     }
 }

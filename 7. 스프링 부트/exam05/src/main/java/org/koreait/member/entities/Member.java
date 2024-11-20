@@ -1,6 +1,5 @@
 package org.koreait.member.entities;
 
-
 import lombok.Data;
 
 import java.time.LocalDateTime;

@@ -17,7 +17,7 @@ public class InterceptorConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(commonInterceptor); // /** 동일
-        //.addPathPatterns("/**");
+                //.addPathPatterns("/**");
 
         registry.addInterceptor(memberOnlyInterceptor)
                 .addPathPatterns("/mypage/**"); // /mypage를 포함한 모든 하위 경로

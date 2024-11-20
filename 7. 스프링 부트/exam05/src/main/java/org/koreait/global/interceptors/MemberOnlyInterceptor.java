@@ -15,7 +15,7 @@ public class MemberOnlyInterceptor implements HandlerInterceptor {
     /**
      * 컨트롤러 빈의 요청 메서드 실행 전 호출
      *  - 반환값이 false : 컨트롤러 빈 요청 메서드 실행 X
-     *  - 반환값이 논리값인 이유 - 화면에 대한 통제
+     *  - 반환값이 논리값인 이유? 화면에 대한 통제
      */
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {

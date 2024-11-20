@@ -1,8 +1,6 @@
-
 package org.koreait.member.controllers;
 
 import org.koreait.member.entities.Member;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,9 +19,9 @@ public class MemberController2 {
 
         RequestJoin form = new RequestJoin();
         form.setEmail("user01@test.org");
-        form.setPassword("1234");
-        form.setConfirmPassword("1234");
-        form.setName("휴먼1");
+        form.setPassword("12345678");
+        form.setConfirmPassword("12345678");
+        form.setName("사용자01");
 
         model.addAttribute("requestJoin", form);
 
@@ -44,8 +42,8 @@ public class MemberController2 {
                     Member member = new Member();
                     member.setSeq(i);
                     member.setEmail("user" + i + "@test.org");
-                    member.setName("<h1>휴먼" + i + "</h1>");
-                    member.setPassword("1234");
+                    member.setName("<h1>사용자" + i + "</h1>");
+                    member.setPassword("12345678");
                     member.setRegDt(LocalDateTime.now());
                     member.setModDt(LocalDateTime.now());
 
