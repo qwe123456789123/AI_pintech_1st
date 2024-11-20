@@ -20,6 +20,12 @@ public class InterceptorConfig implements WebMvcConfigurer {
                 //.addPathPatterns("/**");
 
         registry.addInterceptor(memberOnlyInterceptor)
-                .addPathPatterns("/mypage/**"); // /mypage를 포함한 모든 하위 경로
+                .addPathPatterns("/mypage/**"); //
     }
 }
+/**
+ * commonInterceptor: 특정 결로에 대한 접근 제한
+ *
+ * MemberOnlyInterceptor로 설정한거임
+ * /mypage를 포함한 모든 하위 경로 를 제한함
+ */

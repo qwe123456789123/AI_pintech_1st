@@ -12,3 +12,4 @@ public class StaticPageConfig implements WebMvcConfigurer {
                 .setViewName("member/mypage");
     }
 }
+// 마이페이지를 반환 하는 것들임
