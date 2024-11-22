@@ -73,7 +73,7 @@ public class CommonControllerAdvice {
  * AlertException : alert 메세지 표시
  * 위 코드 설명: global내의 예외 처리를 함
  * AlertBackException: 이전페이지로 이동
- * 위 코드 설명: 예외 처리 발생시 전에 기록되어 있던것들을 가져옴 // 아무것도 안하고 에러만 나옴
+ * 위 코드 설명: 예외 처리 발생시 전에 기록되어 있던것들을 가져옴 // target이 지정한 기록을 가져옴
  * AlertRedirectException 지정한 trl로 돌아감
  * 위 코드 설명: 예외가 발생하면 템플릿으로 돌려 보내겠다.// 다시 로그인 창으로 돌아감
  */

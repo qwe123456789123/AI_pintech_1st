@@ -11,7 +11,7 @@ public class MessageSourceConfig {
     @Bean
     public MessageSource messageSource() {
         ResourceBundleMessageSource ms = new ResourceBundleMessageSource();
-
+        // 메세지를 읽고 처리 하는걸 설정함
         ms.addBasenames("messages.commons", "messages.validations", "messages.errors");
         // 에러 메서지를 가져오는 곳
         ms.setDefaultEncoding("UTF-8");
