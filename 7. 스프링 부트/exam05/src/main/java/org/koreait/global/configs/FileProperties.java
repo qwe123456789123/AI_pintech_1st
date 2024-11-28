@@ -1,4 +1,3 @@
-
 package org.koreait.global.configs;
 
 import lombok.Data;

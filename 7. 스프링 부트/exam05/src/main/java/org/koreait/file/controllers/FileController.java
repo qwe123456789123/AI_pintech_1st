@@ -1,6 +1,8 @@
 package org.koreait.file.controllers;
 
 import lombok.extern.slf4j.Slf4j;
+import org.koreait.etc.Greet;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -13,12 +15,16 @@ import java.io.IOException;
 @Controller
 @RequestMapping("/file")
 public class FileController {
+
+    @Autowired
+    private Greet greet;
+
     @Value("${file.upload.path}") // 설정값을 주입
     private String filePath;
 
     @GetMapping("/upload")
     public String upload() {
-        System.out.println("블라블라");
+        System.out.println(greet.getName());
         return "file/upload";
     }
 

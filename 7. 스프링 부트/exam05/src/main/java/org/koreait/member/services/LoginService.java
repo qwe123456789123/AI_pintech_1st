@@ -21,15 +21,16 @@ public class LoginService {
     public void process(RequestLogin form) {
         // 임시 - 예외 공통 처리 테스트
         String email = form.getEmail();
-        if (!email.equals("qwe123@test.org")){
+        if (!email.equals("user01@test.org")) {
             throw new MemberNotFoundException();
         }
+
 
         /* DB에서 데이터를 가져왔다고 가정! */
         Member member = new Member();
         member.setSeq(1L);
         member.setEmail(form.getEmail());
-        member.setName("휴먼");
+        member.setName("이이름");
         member.setRegDt(LocalDateTime.now());
 
         session.setAttribute("loggedMember", member);

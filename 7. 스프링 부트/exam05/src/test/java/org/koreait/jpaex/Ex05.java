@@ -32,7 +32,7 @@ public class Ex05 {
             //repository.save(member);  // persist(...)
         }
         //repository.saveAll(members);
-        // repository.flush(); //DB에 영구 반영
+       // repository.flush(); //DB에 영구 반영
         repository.saveAllAndFlush(members);
     }
 

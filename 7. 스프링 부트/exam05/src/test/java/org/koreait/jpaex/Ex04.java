@@ -8,14 +8,14 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.transaction.annotation.Transactional;
 
-@SpringBootTest
 @Transactional
+@SpringBootTest
 @ActiveProfiles({"default", "test"})
 public class Ex04 {
 
     @PersistenceContext
     private EntityManager em;
-/*
+    /*
     @BeforeEach
     void init() {
         em.getTransaction().begin();
@@ -25,8 +25,7 @@ public class Ex04 {
     void destroy() {
         em.getTransaction().commit();
     }
-
- */
+    */
 
     @Test
     void test1() {
@@ -42,19 +41,20 @@ public class Ex04 {
         em.flush();
         em.clear();
 
-        Member member1 = em.find(Member.class,1L);
-        Member member2 = em.find(Member.class,2L);
+        Member member1 = em.find(Member.class, 1L);
+        Member member2 = em.find(Member.class, 2L);
 
         System.out.println(member1);
-        System.out.printf("member1.regDt:%s, member1.modDt:%s%n", member1.getModDt());
+        System.out.printf("member1.regDt:%s, member1.modDt:%s%n", member1.getRegDt(), member1.getModDt());
         System.out.println(member2);
-        System.out.printf("member2.regDt:%s, member2.modDt:%s%n", member2.getModDt());
-        member1.setEmail("(수정)휴먼1");
+        System.out.printf("member2.regDt:%s, member2.modDt:%s%n", member2.getRegDt(), member2.getModDt());
+
+        member1.setName("(수정)사용자1");
         em.flush();
 
         em.clear();
         member1 = em.find(Member.class, 1L);
-        System.out.println(member1);
-        System.out.printf("member1.regDt:%s, member1.modDt:%s%n", member1.getModDt());
+        System.out.printf("member1.regDt:%s, member1.modDt:%s%n", member1.getRegDt(), member1.getModDt());
+
     }
 }

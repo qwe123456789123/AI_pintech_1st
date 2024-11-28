@@ -14,5 +14,3 @@ public class CommonException extends RuntimeException {
         this.status = status;
     }
 }
-
-// 모든 예외처리는 이쪽에서 상속 받아서 처리함

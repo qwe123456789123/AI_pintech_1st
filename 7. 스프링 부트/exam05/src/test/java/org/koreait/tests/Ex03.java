@@ -8,7 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
 @SpringBootTest
-@ActiveProfiles({"default","test"})
+@ActiveProfiles({"default", "test"})
 @EnableConfigurationProperties(FileProperties.class)
 public class Ex03 {
 
@@ -16,7 +16,7 @@ public class Ex03 {
     private FileProperties fileProperties;
 
     @Test
-    void test1(){
+    void test1() {
         System.out.println(fileProperties);
     }
 }

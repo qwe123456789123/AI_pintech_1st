@@ -25,7 +25,7 @@ public class Ex01 {
         Member member = new Member();
         member.setSeq(1L);
         member.setEmail("user01@test.org");
-        member.setName("휴먼1");
+        member.setName("사용자01");
         member.setPassword("12345678");
         member.setRegDt(LocalDateTime.now());
 
@@ -34,7 +34,7 @@ public class Ex01 {
         em.flush(); // DB에 영구 반영 - SQL 실행 - INSERT 쿼리
 
 
-        member.setName("(수정)휴먼1"); // 값 변경
+        member.setName("(수정)사용자01"); // 값 변경
         em.flush(); // 변화 감지에 따라서 UPDATE 쿼리 실행
 
 

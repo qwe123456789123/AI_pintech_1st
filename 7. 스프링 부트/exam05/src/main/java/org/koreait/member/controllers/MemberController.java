@@ -67,7 +67,7 @@ public class MemberController {
 
         // 검증 성공시 - 가입 처리 서비스 호출
 
-        return "redirect:/member/login"; // 가입 성공시 로그인 페이지로 이동
+       return "redirect:/member/login"; // 가입 성공시 로그인 페이지로 이동
     }
 
     @GetMapping("/login")
