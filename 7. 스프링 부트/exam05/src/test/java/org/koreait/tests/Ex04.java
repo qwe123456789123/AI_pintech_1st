@@ -74,6 +74,6 @@ public class Ex04 {
     @Test
     void test3() {
         List<Member> members = repository.getMembers("%민%");
-        members.forEach(System.out::println);`
+        members.forEach(System.out::println);
     }
 }
