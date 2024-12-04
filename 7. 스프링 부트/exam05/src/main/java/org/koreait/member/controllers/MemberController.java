@@ -4,6 +4,8 @@ import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.koreait.member.constants.Authority;
+import org.koreait.member.entities.Member;
 import org.koreait.member.services.LoginService;
 import org.koreait.member.validators.JoinValidator;
 import org.springframework.context.MessageSource;
@@ -12,6 +14,8 @@ import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j
@@ -62,7 +66,7 @@ public class MemberController {
         joinValidator.validate(form, errors); // 커맨드 객체 검증
 
         if (errors.hasErrors()) { // 검증 실패! - reject, rejectValue가 한번이라도 호출 되었다!
-            return "member/joinForm"; // 검증 실패하면 사용자에게 양식을 다시 보여주고, 검증 실패 정보를 제공!
+            return "member/joinForm"; // 검증 실패하면 사용자에게 양식을 다시 보여주고, 검증 실패 정보를 제공
         }
 
         // 검증 성공시 - 가입 처리 서비스 호출
@@ -144,4 +148,23 @@ public class MemberController {
         return mv;
     }
     */
+    @ResponseBody
+    @GetMapping("/test")
+    public List<Member> test(){
+        List<Member> members = new ArrayList<>();
+        for(int i = 1; i <= 10; i++){
+            Member member = new Member();
+            member.setSeq((long)i);
+            member.setName("휴먼"+i);
+            member.setPassword("12345678");
+            member.setAuthority(Authority.USER);
+            member.setEmail("qwe"+ i +"@qwe.qwe");
+            member.setRegDt(LocalDateTime.now());
+            member.setModDt(LocalDateTime.now());
+            members.add(member);
+        }
+        return members;
+    }
+
+
 }
