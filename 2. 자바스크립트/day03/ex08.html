@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <button type="button" id="button">눌러</button>
+    <script>
+      const buttonEL = document.getElementById("button");
+
+      const person = {
+        name: "휴먼",
+        age: 100,
+        handleEvent: function () {
+          console.log("handleEvent", this);
+        },
+      };
+
+      buttonEL.addEventListener("click", person);
+    </script>
+  </body>
+</html>
